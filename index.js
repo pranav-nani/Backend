@@ -12,10 +12,17 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+
+const data = {
+    name:"pranav reddy",
+    rollno:"122"
+}
 app.get('/login', (req, res) => {
     res.send('<h1>This is a heading</h1>')
 })
-
+app.get('/github', (req,res)=>{
+    res.json(data)
+})
 app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${port}`)
 })
